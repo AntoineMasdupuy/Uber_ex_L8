@@ -19,3 +19,7 @@ def load_data(nrows):
         lowercaser=lambda x:str(x).lower()
         data.rename(lowercase, axis="columns", inplace=True)
         data[DATE_COLUMN]=pd.to_datetime(data[DATE_COLUMN])
+
+data_load_stste=st.text("Loading Data...")
+data=load_data(10000)
+data_load_state.textr("Loading Data Done!")
